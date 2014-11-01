@@ -13,6 +13,9 @@
 		844124E21A0507050096DE83 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 844124E01A0507050096DE83 /* LaunchScreen.xib */; };
 		844124EE1A0507050096DE83 /* GawaNativeIosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844124ED1A0507050096DE83 /* GawaNativeIosTests.swift */; };
 		844124F91A050DE10096DE83 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 844124F81A050DE10096DE83 /* index.html */; };
+		844124FD1A0514750096DE83 /* main.js in Resources */ = {isa = PBXBuildFile; fileRef = 844124FC1A0514750096DE83 /* main.js */; };
+		844124FF1A0514C90096DE83 /* main.css in Resources */ = {isa = PBXBuildFile; fileRef = 844124FE1A0514C90096DE83 /* main.css */; };
+		844125011A0515120096DE83 /* hydlide.png in Resources */ = {isa = PBXBuildFile; fileRef = 844125001A0515120096DE83 /* hydlide.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		844124EC1A0507050096DE83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		844124ED1A0507050096DE83 /* GawaNativeIosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GawaNativeIosTests.swift; sourceTree = "<group>"; };
 		844124F81A050DE10096DE83 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = index.html; path = GawaNativeIos/Resources/index.html; sourceTree = "<group>"; };
+		844124FC1A0514750096DE83 /* main.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = main.js; path = GawaNativeIos/Resources/main.js; sourceTree = "<group>"; };
+		844124FE1A0514C90096DE83 /* main.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = main.css; path = GawaNativeIos/Resources/main.css; sourceTree = "<group>"; };
+		844125001A0515120096DE83 /* hydlide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hydlide.png; path = GawaNativeIos/Resources/hydlide.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +121,10 @@
 		844124F71A050D840096DE83 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				844125001A0515120096DE83 /* hydlide.png */,
 				844124F81A050DE10096DE83 /* index.html */,
+				844124FC1A0514750096DE83 /* main.js */,
+				844124FE1A0514C90096DE83 /* main.css */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -201,8 +210,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				844124F91A050DE10096DE83 /* index.html in Resources */,
+				844124FF1A0514C90096DE83 /* main.css in Resources */,
 				844124E21A0507050096DE83 /* LaunchScreen.xib in Resources */,
 				844124DF1A0507050096DE83 /* Images.xcassets in Resources */,
+				844124FD1A0514750096DE83 /* main.js in Resources */,
+				844125011A0515120096DE83 /* hydlide.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
