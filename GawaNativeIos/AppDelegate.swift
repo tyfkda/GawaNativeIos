@@ -6,11 +6,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   var navigationController: UINavigationController?
 
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-    self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+    window = UIWindow(frame: UIScreen.mainScreen().bounds)
 
     let viewController: ViewController = ViewController()
-    self.window!.rootViewController = viewController
-    self.window!.makeKeyAndVisible()
+    window!.rootViewController = viewController
+    window!.makeKeyAndVisible()
 
     return true
   }
