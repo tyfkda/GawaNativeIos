@@ -18,7 +18,17 @@ class ViewController: UIViewController, UIWebViewDelegate {
   }
 
   func webView(webView: UIWebView!, shouldStartLoadWithRequest request: NSURLRequest!, navigationType: UIWebViewNavigationType) -> Bool {
+    let kScheme = "native://";
+    let url = request.URL.absoluteString
+    if url!.hasPrefix(kScheme) {
+      evaluateJs("addTextNode('\(url!) ');")
+      return false
+    }
     return true
+  }
+
+  func evaluateJs(script: String) -> String? {
+    return self.webview.stringByEvaluatingJavaScriptFromString(script)
   }
 
   override func didReceiveMemoryWarning() {
