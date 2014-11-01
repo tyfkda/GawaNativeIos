@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  GawaNativeIos
-//
-//  Created by admin on 2014/11/01.
-//  Copyright (c) 2014年 admin. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain
