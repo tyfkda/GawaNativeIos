@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		844124D81A0507050096DE83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844124D71A0507050096DE83 /* AppDelegate.swift */; };
 		844124DA1A0507050096DE83 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844124D91A0507050096DE83 /* ViewController.swift */; };
-		844124DD1A0507050096DE83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844124DB1A0507050096DE83 /* Main.storyboard */; };
 		844124DF1A0507050096DE83 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 844124DE1A0507050096DE83 /* Images.xcassets */; };
 		844124E21A0507050096DE83 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 844124E01A0507050096DE83 /* LaunchScreen.xib */; };
 		844124EE1A0507050096DE83 /* GawaNativeIosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844124ED1A0507050096DE83 /* GawaNativeIosTests.swift */; };
@@ -30,7 +29,6 @@
 		844124D61A0507050096DE83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		844124D71A0507050096DE83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		844124D91A0507050096DE83 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		844124DC1A0507050096DE83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		844124DE1A0507050096DE83 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		844124E11A0507050096DE83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		844124E71A0507050096DE83 /* GawaNativeIosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GawaNativeIosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,7 +77,6 @@
 			children = (
 				844124D71A0507050096DE83 /* AppDelegate.swift */,
 				844124D91A0507050096DE83 /* ViewController.swift */,
-				844124DB1A0507050096DE83 /* Main.storyboard */,
 				844124DE1A0507050096DE83 /* Images.xcassets */,
 				844124E01A0507050096DE83 /* LaunchScreen.xib */,
 				844124D51A0507050096DE83 /* Supporting Files */,
@@ -192,7 +189,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				844124DD1A0507050096DE83 /* Main.storyboard in Resources */,
 				844124E21A0507050096DE83 /* LaunchScreen.xib in Resources */,
 				844124DF1A0507050096DE83 /* Images.xcassets in Resources */,
 			);
@@ -236,14 +232,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		844124DB1A0507050096DE83 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				844124DC1A0507050096DE83 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		844124E01A0507050096DE83 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -407,6 +395,7 @@
 				844124F31A0507050096DE83 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		844124F41A0507050096DE83 /* Build configuration list for PBXNativeTarget "GawaNativeIosTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +404,7 @@
 				844124F61A0507050096DE83 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
