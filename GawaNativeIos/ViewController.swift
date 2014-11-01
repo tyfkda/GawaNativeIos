@@ -11,7 +11,8 @@ class ViewController: UIViewController, UIWebViewDelegate {
     self.webview.delegate = self;
     self.view.addSubview(self.webview)
 
-    let url = NSURL(string: "http://www.example.com/")!
+    let path = NSBundle.mainBundle().pathForResource("index", ofType: "html")!
+    let url = NSURL(string: path)!
     let urlRequest = NSURLRequest(URL: url)
     self.webview.loadRequest(urlRequest)
   }

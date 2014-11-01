@@ -12,6 +12,7 @@
 		844124DF1A0507050096DE83 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 844124DE1A0507050096DE83 /* Images.xcassets */; };
 		844124E21A0507050096DE83 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 844124E01A0507050096DE83 /* LaunchScreen.xib */; };
 		844124EE1A0507050096DE83 /* GawaNativeIosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844124ED1A0507050096DE83 /* GawaNativeIosTests.swift */; };
+		844124F91A050DE10096DE83 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 844124F81A050DE10096DE83 /* index.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,7 @@
 		844124E71A0507050096DE83 /* GawaNativeIosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GawaNativeIosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		844124EC1A0507050096DE83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		844124ED1A0507050096DE83 /* GawaNativeIosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GawaNativeIosTests.swift; sourceTree = "<group>"; };
+		844124F81A050DE10096DE83 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = index.html; path = GawaNativeIos/Resources/index.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				844124D41A0507050096DE83 /* GawaNativeIos */,
 				844124EA1A0507050096DE83 /* GawaNativeIosTests */,
 				844124D31A0507050096DE83 /* Products */,
+				844124F71A050D840096DE83 /* Resources */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,6 +110,14 @@
 				844124EC1A0507050096DE83 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		844124F71A050D840096DE83 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				844124F81A050DE10096DE83 /* index.html */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,6 +200,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				844124F91A050DE10096DE83 /* index.html in Resources */,
 				844124E21A0507050096DE83 /* LaunchScreen.xib in Resources */,
 				844124DF1A0507050096DE83 /* Images.xcassets in Resources */,
 			);
