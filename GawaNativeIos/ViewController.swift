@@ -1,19 +1,19 @@
 import UIKit
 
 class ViewController: UIViewController, UIWebViewDelegate {
-  let webview: UIWebView = UIWebView()
+  let webView: UIWebView = UIWebView()
 
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    webview.frame = view.bounds
-    webview.delegate = self;
-    view.addSubview(webview)
+    webView.frame = view.bounds
+    webView.delegate = self;
+    view.addSubview(webView)
 
     let path = NSBundle.mainBundle().pathForResource("index", ofType: "html")!
     let url = NSURL(string: path)!
     let urlRequest = NSURLRequest(URL: url)
-    webview.loadRequest(urlRequest)
+    webView.loadRequest(urlRequest)
   }
 
   func webView(webView: UIWebView!, shouldStartLoadWithRequest request: NSURLRequest!, navigationType: UIWebViewNavigationType) -> Bool {
@@ -27,7 +27,7 @@ class ViewController: UIViewController, UIWebViewDelegate {
   }
 
   func evaluateJs(script: String) -> String? {
-    return webview.stringByEvaluatingJavaScriptFromString(script)
+    return webView.stringByEvaluatingJavaScriptFromString(script)
   }
 
   override func didReceiveMemoryWarning() {
