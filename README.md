@@ -94,11 +94,13 @@ JavaScriptからネイティブに対してなにか起動するにはURLをリ�
 ここでは`native://`などとしてみる。
 
 html(JavaScript)側：
+
 ```html
 <p><a href="native://foo/bar.baz">Push me!</a></p>
 ```
 
 ネイティブ(Swift)側：
+
 ```swift
   func webView(webView: UIWebView!, shouldStartLoadWithRequest request: NSURLRequest!, navigationType: UIWebViewNavigationType) -> Bool {
     let kScheme = "native://";
@@ -115,6 +117,7 @@ html(JavaScript)側：
 
 ### ネイティブからJavaScriptを呼び出す
 `UIWebView#stringByEvaluatingJavaScriptFromString`を使用する：
+
 ```swift
   webView.stringByEvaluatingJavaScriptFromString(script)
 ```
