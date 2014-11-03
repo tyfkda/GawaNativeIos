@@ -5,9 +5,11 @@ iOSでガワネイティブ
 WebViewを使ってhtml+JavaScriptを使ってアプリを組みたい。
 今回はiOS, Swiftで作ってみる。
 
+[コード](https://github.com/tyfkda/GawaNativeIos)
+
 ## Storyboardを使わないようにする
-単純なレイアウトなのでStoryboardを使わない。
-XCodeでSwiftのプロジェクトを作った時に自動的に作られるMain.storyboardを使わないようにする。
+単にWebViewを全画面に配置するだけの単純なレイアウトなのでStoryboardは必要ない。
+なのでXCodeでSwiftのプロジェクトを作った時に自動的に作られるMain.storyboardを使わないようにする。
 
 * XCodeでプロジェクトのターゲット > General > Deployment Info > Main Interface
   を空にする。
@@ -47,10 +49,11 @@ class ViewController: UIViewController, UIWebViewDelegate {
   }
 ```
 
-* `webView`の`frame`を`view.bounds`にしてやると全画面になる
+* `webView`の`frame`をコントローラ自体の`view.bounds`にしてやると全画面になる
 
 ## htmlの表示
-htmlをリソースとしてアプリ内部に持ち、それをWebViewで表示する
+htmlは外部httpサーバから取ってくることもできるが、ここではリソースとしてアプリ内部に持ち、
+それをWebViewで表示することにする。
 
 ```swift
 class ViewController: UIViewController, UIWebViewDelegate {
@@ -58,6 +61,7 @@ class ViewController: UIViewController, UIWebViewDelegate {
 
   override func viewDidLoad() {
     ...
+    //let url = NSURL(string: "http://www.example.com/")!
     let path = NSBundle.mainBundle().pathForResource("index", ofType: "html")!
     let url = NSURL(string: path)!
     let urlRequest = NSURLRequest(URL: url)
@@ -73,7 +77,7 @@ class ViewController: UIViewController, UIWebViewDelegate {
 * `UIWebView#loadRequest`でWebViewに読み込む
 
 ## htmlから画像、JavaScript、CSSを読み込む
-html内で相対パスで書けば、リソース内のファイルが自動的に読み込まれる
+html内で相対パスで書けばリソース内のファイルが自動的に読み込まれる
 
 ```html
 <link rel="stylesheet" type="text/css" href="main.css" />
@@ -107,12 +111,12 @@ html(JavaScript)側：
   }
 ```
 
+* 呼び出されたネイティブ側では、スキーム以外のURLの残り部分を使って自由に処理すればよい
+
 ### ネイティブからJavaScriptを呼び出す
 `UIWebView#stringByEvaluatingJavaScriptFromString`を使用する：
 ```swift
-func evaluateJs(script: String) -> String? {
-  return webView.stringByEvaluatingJavaScriptFromString(script)
-}
+  webView.stringByEvaluatingJavaScriptFromString(script)
 ```
 
-全部文字列にしないといけないのがアレだけど…
+毎回evalすることになるし全部文字列にしないといけないのがアレだけど…
