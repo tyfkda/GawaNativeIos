@@ -21,7 +21,7 @@ class ViewController: UIViewController, UIWebViewDelegate {
     let url = request.URL.absoluteString
     if url!.hasPrefix(kScheme) {
       evaluateJs("addTextNode('\(url!) ');")
-      return false
+      return false  // ページ遷移を行わないようにfalseを返す
     }
     return true
   }
