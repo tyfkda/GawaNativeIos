@@ -8,12 +8,8 @@ class ViewController: UIViewController, UIWebViewDelegate {
 
     webView.frame = view.bounds
     webView.delegate = self;
+    webView.scrollView.bounces = false
     view.addSubview(webView)
-
-    let subview: AnyObject = webView.subviews[0]
-    if let scrollView = subview as? UIScrollView {
-      scrollView.bounces = false
-    }
 
     let path = NSBundle.mainBundle().pathForResource("index", ofType: "html")!
     let url = NSURL(string: path)!
