@@ -7,7 +7,7 @@ class ViewController: UIViewController, UIWebViewDelegate {
     super.viewDidLoad()
 
     webView.frame = view.bounds
-    webView.delegate = self;
+    webView.delegate = self
     webView.scrollView.bounces = false
     view.addSubview(webView)
 
@@ -17,12 +17,14 @@ class ViewController: UIViewController, UIWebViewDelegate {
     webView.loadRequest(urlRequest)
   }
 
-  func webView(webView: UIWebView!, shouldStartLoadWithRequest request: NSURLRequest!, navigationType: UIWebViewNavigationType) -> Bool {
-    let kScheme = "native://";
-    let url = request.URL.absoluteString
-    if url!.hasPrefix(kScheme) {
-      evaluateJs("addTextNode('\(url!) ');")
-      return false  // ページ遷移を行わないようにfalseを返す
+  let kScheme = "native://";
+
+  func webView(webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+    if let url = request.URL?.absoluteString {
+      if url.hasPrefix(kScheme) {
+        evaluateJs("addTextNode('\(url) ');")
+        return false  // ページ遷移を行わないようにfalseを返す
+      }
     }
     return true
   }

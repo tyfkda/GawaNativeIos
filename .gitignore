@@ -1,2 +1,4 @@
 .DS_Store
 /GawaNativeIos.xcodeproj/xcuserdata/
+/DerivedData/
+*.xccheckout
