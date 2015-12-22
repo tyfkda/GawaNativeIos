@@ -11,8 +11,7 @@ class ViewController: UIViewController, UIWebViewDelegate {
     webView.scrollView.bounces = false
     view.addSubview(webView)
 
-    let path = NSBundle.mainBundle().pathForResource("index", ofType: "html")!
-    let url = NSURL(string: path)!
+    let url = NSBundle.mainBundle().URLForResource("index", withExtension: ".html")!
     let urlRequest = NSURLRequest(URL: url)
     webView.loadRequest(urlRequest)
   }
