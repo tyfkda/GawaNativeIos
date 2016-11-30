@@ -16,6 +16,7 @@
 		844124FD1A0514750096DE83 /* main.js in Resources */ = {isa = PBXBuildFile; fileRef = 844124FC1A0514750096DE83 /* main.js */; };
 		844124FF1A0514C90096DE83 /* main.css in Resources */ = {isa = PBXBuildFile; fileRef = 844124FE1A0514C90096DE83 /* main.css */; };
 		844125011A0515120096DE83 /* hydlide.png in Resources */ = {isa = PBXBuildFile; fileRef = 844125001A0515120096DE83 /* hydlide.png */; };
+		84F16D4C1DEF017500C30D5E /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F16D4B1DEF017500C30D5E /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		844124FC1A0514750096DE83 /* main.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = main.js; path = GawaNativeIos/Resources/main.js; sourceTree = "<group>"; };
 		844124FE1A0514C90096DE83 /* main.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = main.css; path = GawaNativeIos/Resources/main.css; sourceTree = "<group>"; };
 		844125001A0515120096DE83 /* hydlide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hydlide.png; path = GawaNativeIos/Resources/hydlide.png; sourceTree = "<group>"; };
+		84F16D4B1DEF017500C30D5E /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84F16D4C1DEF017500C30D5E /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +72,7 @@
 				844124EA1A0507050096DE83 /* GawaNativeIosTests */,
 				844124D31A0507050096DE83 /* Products */,
 				844124F71A050D840096DE83 /* Resources */,
+				84F16D4A1DEF017500C30D5E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,6 +131,14 @@
 				844124FE1A0514C90096DE83 /* main.css */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		84F16D4A1DEF017500C30D5E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				84F16D4B1DEF017500C30D5E /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

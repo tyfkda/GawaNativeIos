@@ -1,36 +1,41 @@
 import UIKit
+import WebKit
 
-class ViewController: UIViewController, UIWebViewDelegate {
-  let webView: UIWebView = UIWebView()
+class ViewController: UIViewController, WKNavigationDelegate {
+  let webView: WKWebView = WKWebView()
 
   override func viewDidLoad() {
     super.viewDidLoad()
 
     webView.frame = view.bounds
-    webView.delegate = self
+    webView.navigationDelegate = self
     webView.scrollView.bounces = false
     view.addSubview(webView)
 
     let url = Bundle.main.url(forResource: "index", withExtension: ".html")!
     let urlRequest = URLRequest(url: url)
-    webView.loadRequest(urlRequest)
+    webView.load(urlRequest)
   }
 
   let kScheme = "native://";
 
-  func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
-    if let url = request.url?.absoluteString {
+  func webView(_ webView: WKWebView,
+               decidePolicyFor navigationAction: WKNavigationAction,
+               decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+    var policy = WKNavigationActionPolicy.allow
+    if let url = navigationAction.request.url?.absoluteString {
       if url.hasPrefix(kScheme) {
         evaluateJs("addTextNode('\(url) ');")
-        return false  // ページ遷移を行わないようにfalseを返す
+        policy = WKNavigationActionPolicy.cancel  // ページ遷移を行わないようにcancelを返す
       }
     }
-    return true
+    decisionHandler(policy)
   }
 
-  @discardableResult
-  func evaluateJs(_ script: String) -> String? {
-    return webView.stringByEvaluatingJavaScript(from: script)
+  func evaluateJs(_ script: String) {
+    webView.evaluateJavaScript(script, completionHandler: {(result: Any?, error: Error?) in
+      print("JS result=\(result), error=\(error)")
+    })
   }
 
   override func didReceiveMemoryWarning() {
