@@ -28,6 +28,7 @@ class ViewController: UIViewController, UIWebViewDelegate {
     return true
   }
 
+  @discardableResult
   func evaluateJs(_ script: String) -> String? {
     return webView.stringByEvaluatingJavaScript(from: script)
   }
